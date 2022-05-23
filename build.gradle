@@ -8,3 +8,16 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    fragmentKtxVersion = '1.4.1'
+    navigationVersion = '2.4.2'
+    coroutinesVersion = '1.6.1'
+    lifecycleVersion = '2.4.1'
+    dataStoreVersion = '1.0.0'
+    glideVersion = '4.13.0'
+    swipeRefresh = '1.1.0'
+    hiltVersion = '2.39.1'
+    roomVersion = '2.4.2'
+    rvVersion = '1.2.1'
+}
