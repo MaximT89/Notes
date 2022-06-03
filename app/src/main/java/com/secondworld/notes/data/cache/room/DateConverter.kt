@@ -21,6 +21,6 @@ class DateConverter {
     }
 
     fun dateToTimestampCustom(date: Date?): String {
-        return formatter.format(date).toString()
+        return formatter.format(date!!).toString()
     }
 }
