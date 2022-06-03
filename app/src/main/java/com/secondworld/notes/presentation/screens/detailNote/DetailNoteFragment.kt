@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.secondworld.notes.R
 import com.secondworld.notes.core.BaseFragment
+import com.secondworld.notes.core.log
 import com.secondworld.notes.databinding.FragmentDetailNoteBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,6 +19,9 @@ class DetailNoteFragment : BaseFragment<FragmentDetailNoteBinding>(FragmentDetai
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
 
+    override fun title(): String {
+        return viewModel.title()
     }
 }

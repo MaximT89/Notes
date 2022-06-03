@@ -3,7 +3,6 @@ package com.secondworld.notes.di
 import android.content.Context
 import androidx.room.Room
 import com.secondworld.notes.data.cache.room.AppDatabase
-import com.secondworld.notes.data.cache.room.MIGRATION_1_2
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,8 +17,7 @@ class AppModuleProvides {
     @Provides
     @Singleton
     fun provideAppDatabase(@ApplicationContext context : Context) : AppDatabase =
-        Room.databaseBuilder(context, AppDatabase::class.java, "note_db")
-            .addMigrations(MIGRATION_1_2).build()
+        Room.databaseBuilder(context, AppDatabase::class.java, "note_db").build()
 
     @Provides
     @Singleton
