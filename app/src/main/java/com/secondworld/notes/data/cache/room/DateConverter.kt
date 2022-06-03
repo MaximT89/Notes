@@ -20,7 +20,7 @@ class DateConverter {
         return date?.time
     }
 
-    fun dateToTimestampCustom(date: Date): String {
-        return formatter.format(date).toString()
+    fun dateToTimestampCustom(date: Date?): String {
+        return formatter.format(date!!).toString()
     }
 }

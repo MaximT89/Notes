@@ -13,4 +13,8 @@ interface NoteDao {
 
     @Query("SELECT * FROM 'table_notes' WHERE noteId = :id")
     suspend fun getNoteById(id : Int) : NoteModel
+
+    @Query("SELECT * FROM 'table_notes' WHERE noteColor = :color")
+    suspend fun getNotesByColor(color : String) : List<NoteModel>
+
 }
