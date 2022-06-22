@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
@@ -15,12 +15,12 @@ import com.secondworld.notes.core.navigation.Navigator
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
-@Suppress("UNCHECKED_CAST")
-abstract class BaseFragment<B : ViewBinding>(private val inflate: Inflate<B>) : Fragment(),
+abstract class BaseFragment<B : ViewBinding, VM : ViewModel>(private val inflate: Inflate<B>) : Fragment(),
     BackNavigationUi, Navigator {
 
     private var _viewBinding: B? = null
     protected val binding get() = checkNotNull(_viewBinding)
+    protected abstract val viewModel: VM
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,17 +30,6 @@ abstract class BaseFragment<B : ViewBinding>(private val inflate: Inflate<B>) : 
         _viewBinding = inflate.invoke(inflater, container, false)
         return binding.root
     }
-
-    override fun showBack() = true
-
-    /**
-     * Выносим логику навигации в базовый фрагмент, во фрагментах используем метод [navigateTo]
-     */
-    override fun navigateTo(resId: Int, args: Bundle?, navOptions: NavOptions?) =
-        findNavController().navigate(resId, args, navOptions)
-
-    override fun navigateTo(resId: Int) =
-        findNavController().navigate(resId)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -52,9 +41,23 @@ abstract class BaseFragment<B : ViewBinding>(private val inflate: Inflate<B>) : 
     }
 
     /**
+     * На всех экранах отображаем кнопку назад, кроме стартового экрана
+     */
+    override fun showBack() : Boolean { return true }
+
+    /**
      * На каждом фрагменте обязательно нужно переопределить title, который отображается в actionBar
      */
     abstract fun title(): String
+
+    /**
+     * Выносим логику навигации в базовый фрагмент, во фрагментах используем метод [navigateTo]
+     */
+    override fun navigateTo(resId: Int, args: Bundle?, navOptions: NavOptions?) =
+        findNavController().navigate(resId, args, navOptions)
+
+    override fun navigateTo(resId: Int) =
+        findNavController().navigate(resId)
 
     override fun onDestroy() {
         super.onDestroy()

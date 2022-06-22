@@ -7,4 +7,3 @@ enum class ColorResource(val intColor : Int) {
     GREEN(R.color.green),
     YELLOW(R.color.yellow)
 }
-
