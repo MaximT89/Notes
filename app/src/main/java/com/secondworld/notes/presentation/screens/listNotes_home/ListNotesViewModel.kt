@@ -1,4 +1,4 @@
-package com.secondworld.notes.presentation.screens.listNotes
+package com.secondworld.notes.presentation.screens.listNotes_home
 
 import androidx.lifecycle.ViewModel
 import com.secondworld.notes.R

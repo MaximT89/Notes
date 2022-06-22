@@ -1,14 +1,11 @@
-package com.secondworld.notes.presentation.screens.listNotes
+package com.secondworld.notes.presentation.screens.listNotes_home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.secondworld.notes.R
 import com.secondworld.notes.core.BaseFragment
-import com.secondworld.notes.core.log
 import com.secondworld.notes.databinding.FragmentListNotesBinding
 import dagger.hilt.android.AndroidEntryPoint
 

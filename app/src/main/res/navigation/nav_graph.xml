@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/listNotesFragment"
-        android:name="com.secondworld.notes.presentation.screens.listNotes.ListNotesFragment"
+        android:name="com.secondworld.notes.presentation.screens.listNotes_home.ListNotesFragment"
         android:label="fragment_list_notes"
         tools:layout="@layout/fragment_list_notes" >
         <action
