@@ -21,7 +21,5 @@ class DetailNoteFragment : BaseFragment<FragmentDetailNoteBinding>(FragmentDetai
         super.onViewCreated(view, savedInstanceState)
     }
 
-    override fun title(): String {
-        return viewModel.title()
-    }
+    override fun title() = viewModel.title()
 }

@@ -23,11 +23,10 @@ class ListNotesFragment : BaseFragment<FragmentListNotesBinding>(FragmentListNot
     }
 
     private fun initView() {
-        binding.btnAddNote.setOnClickListener{
+        binding.btnAddNote.setOnClickListener {
             findNavController().navigate(R.id.action_listNotesFragment_to_createNoteFragment)
         }
     }
 
     override fun title() = viewModel.title()
-
 }

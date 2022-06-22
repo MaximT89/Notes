@@ -3,15 +3,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:padding="8dp"
-    android:layout_height="match_parent">
-
+    tools:context=".presentation.screens.createNote.CreateNoteFragment">
 
     <RelativeLayout
+        android:id="@+id/rootLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        tools:context=".presentation.screens.createNote.CreateNoteFragment">
+        android:padding="8dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_color"
@@ -20,27 +20,34 @@
             tools:layout_height="100dp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutRoot"
+            android:id="@+id/textInputLayoutRootTitle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/recycler_view_color"
-            android:layout_height="wrap_content">
+            android:hint="@string/create_title_note">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputLayout"
+                android:id="@+id/editTitleNote"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/create_title_note"/>
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRoot"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Заголовок 2"
-            android:layout_below="@+id/textInputLayoutRoot"
-            />
+            android:layout_below="@+id/textInputLayoutRootTitle"
+            android:hint="@string/create_text_note">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTestNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
+        </com.google.android.material.textfield.TextInputLayout>
 
     </RelativeLayout>
 </ScrollView>

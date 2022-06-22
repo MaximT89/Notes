@@ -36,8 +36,6 @@ abstract class BaseFragment<B : ViewBinding>(private val inflate: Inflate<B>) : 
             title = title()
             setDisplayHomeAsUpEnabled(showBack())
         }
-
-        requireActivity().hideSoftKeyboard()
     }
 
     abstract fun title() : String
