@@ -1,14 +1,9 @@
 package com.secondworld.notes.presentation.screens.detailNote
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.secondworld.notes.R
-import com.secondworld.notes.core.BaseFragment
-import com.secondworld.notes.core.log
+import com.secondworld.notes.core.base.BaseFragment
 import com.secondworld.notes.databinding.FragmentDetailNoteBinding
 import dagger.hilt.android.AndroidEntryPoint
 

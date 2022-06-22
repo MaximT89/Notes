@@ -20,6 +20,5 @@ class AppModuleProvides {
         Room.databaseBuilder(context, AppDatabase::class.java, "note_db").build()
 
     @Provides
-    @Singleton
     fun provideNoteDao(appDatabase: AppDatabase) = appDatabase.noteDao()
 }

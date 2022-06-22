@@ -1,4 +1,4 @@
-package com.secondworld.notes.core
+package com.secondworld.notes.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

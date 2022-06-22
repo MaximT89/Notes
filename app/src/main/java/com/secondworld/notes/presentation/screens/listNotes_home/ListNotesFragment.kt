@@ -5,7 +5,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.secondworld.notes.R
-import com.secondworld.notes.core.BaseFragment
+import com.secondworld.notes.core.base.BaseFragment
 import com.secondworld.notes.databinding.FragmentListNotesBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +24,7 @@ class ListNotesFragment : BaseFragment<FragmentListNotesBinding>(FragmentListNot
 
     private fun initView() {
         binding.btnAddNote.setOnClickListener {
-            findNavController().navigate(R.id.action_listNotesFragment_to_createNoteFragment)
+            navigateTo(R.id.action_listNotesFragment_to_createNoteFragment)
         }
     }
 

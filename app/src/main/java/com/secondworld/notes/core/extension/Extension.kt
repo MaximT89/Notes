@@ -1,4 +1,4 @@
-package com.secondworld.notes.core
+package com.secondworld.notes.core.extension
 
 import android.util.Log
 import android.view.View

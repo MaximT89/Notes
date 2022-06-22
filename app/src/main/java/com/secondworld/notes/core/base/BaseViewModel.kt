@@ -1,4 +1,4 @@
-package com.secondworld.notes.core
+package com.secondworld.notes.core.base
 
 import androidx.lifecycle.ViewModel
 

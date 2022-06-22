@@ -4,11 +4,12 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface NoteDao {
 
-    @Insert(onConflict = REPLACE)
+    @Insert(onConflict = REPLACE, entity = NoteModel::class)
     suspend fun insert(noteModel: NoteModel)
 
     @Query("SELECT * FROM 'table_notes' WHERE noteId = :id")
@@ -16,5 +17,8 @@ interface NoteDao {
 
     @Query("SELECT * FROM 'table_notes' WHERE noteColor = :color")
     suspend fun getNotesByColor(color : String) : List<NoteModel>
+
+    @Update(entity = NoteModel::class)
+    suspend fun updateNote(noteModel: NoteModel)
 
 }
