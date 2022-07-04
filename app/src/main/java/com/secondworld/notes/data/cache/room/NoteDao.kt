@@ -20,5 +20,4 @@ interface NoteDao {
 
     @Update(entity = NoteModel::class)
     suspend fun updateNote(noteModel: NoteModel)
-
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="8dp"
     tools:context=".presentation.screens.createNote.CreateNoteFragment">
 
@@ -25,11 +26,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="70"
+            app:endIconMode="clear_text"
             android:layout_below="@+id/recycler_view_color"
             android:hint="@string/create_title_note">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTitleNote"
+                android:maxLength="70"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -47,9 +52,19 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTestNote"
                 android:layout_width="match_parent"
+                android:gravity="top"
+                android:minLines="10"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/textInputLayoutRoot"
+            android:textStyle="bold"
+            tools:text = "Дата заметки: 04.07.2022г. 10:00"/>
 
     </RelativeLayout>
 </ScrollView>

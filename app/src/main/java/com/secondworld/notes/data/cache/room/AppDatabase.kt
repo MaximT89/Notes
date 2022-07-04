@@ -11,9 +11,3 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 abstract class AppDatabase : RoomDatabase(){
     abstract fun noteDao() : NoteDao
 }
-
-
-
-
-
-
