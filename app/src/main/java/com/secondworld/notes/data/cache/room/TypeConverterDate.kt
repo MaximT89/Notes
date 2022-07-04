@@ -5,7 +5,7 @@ import androidx.room.TypeConverter
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DateConverter {
+class TypeConverterDate {
 
     @SuppressLint("SimpleDateFormat")
     val formatter = SimpleDateFormat("dd.MM.yyyyг. hh:mm:ss")

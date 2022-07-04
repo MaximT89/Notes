@@ -10,7 +10,7 @@ import androidx.room.Update
 interface NoteDao {
 
     @Insert(onConflict = REPLACE, entity = NoteModel::class)
-    suspend fun insert(noteModel: NoteModel)
+    suspend fun saveNote(noteModel: NoteModel)
 
     @Query("SELECT * FROM 'table_notes' WHERE noteId = :id")
     suspend fun getNoteById(id : Int) : NoteModel
