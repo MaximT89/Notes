@@ -43,7 +43,9 @@ abstract class BaseFragment<B : ViewBinding, VM : ViewModel>(private val inflate
     /**
      * На всех экранах отображаем кнопку назад, кроме стартового экрана
      */
-    override fun showBack() : Boolean { return true }
+    override fun showBack() : Boolean {
+        return true
+    }
 
     /**
      * На каждом фрагменте обязательно нужно переопределить title, который отображается в actionBar

@@ -2,12 +2,10 @@ package com.secondworld.notes.presentation.screens.createNote
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
-import com.google.android.material.snackbar.Snackbar
 import com.secondworld.notes.core.base.BaseFragment
-import com.secondworld.notes.core.extension.log
 import com.secondworld.notes.databinding.FragmentCreateNoteBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,13 +23,11 @@ class CreateNoteFragment :
         initObservers()
     }
 
-
-
     private fun initObservers() = with(viewModel){
 
         currentDate.observe(viewLifecycleOwner){
             binding.currentDateText.text = it
         }
     }
-
 }
+
