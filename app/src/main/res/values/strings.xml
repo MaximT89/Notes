@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Notes</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="notes">Заметки</string>
     <string name="creater_note">Создание заметки</string>
     <string name="detail_note">Заметка</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
     <string name="create_title_note">Заголовок</string>
     <string name="create_text_note">Текст заметки</string>
+    <string name="current_date">Дата заметки: </string>
+    <string name="new_note">Новая заметка</string>
+    <string name="note_text_empty">Заполните текст заметки</string>
 </resources>

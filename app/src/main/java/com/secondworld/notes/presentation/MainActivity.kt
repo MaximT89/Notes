@@ -1,10 +1,12 @@
 package com.secondworld.notes.presentation
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.secondworld.notes.R
 import com.secondworld.notes.core.base.BaseActivity
+import com.secondworld.notes.core.extension.log
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

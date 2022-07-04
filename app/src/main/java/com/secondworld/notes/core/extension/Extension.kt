@@ -1,8 +1,11 @@
 package com.secondworld.notes.core.extension
 
+import android.annotation.SuppressLint
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import java.text.SimpleDateFormat
+import java.util.*
 
 fun updateText(view: TextView, message: Any) {
     view.text = message.toString()
@@ -36,4 +39,9 @@ fun hideViews(vararg views: View) {
 
 fun log(message : String){
     Log.d("TAG", "log: $message")
+}
+
+@SuppressLint("SimpleDateFormat")
+fun Date.currentDate() : String {
+    return SimpleDateFormat("dd.MM.yyyyг. hh:mm:ss").format(Date()).toString()
 }
