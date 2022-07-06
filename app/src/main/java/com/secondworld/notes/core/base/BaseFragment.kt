@@ -1,5 +1,6 @@
 package com.secondworld.notes.core.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -39,7 +40,7 @@ abstract class BaseFragment<B : ViewBinding, VM : ViewModel>(private val inflate
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        toolbar = activity?.findViewById<Toolbar>(R.id.toolbar)
+        toolbar = activity?.findViewById(R.id.toolbar)
         toolbar?.title = title()
 
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
