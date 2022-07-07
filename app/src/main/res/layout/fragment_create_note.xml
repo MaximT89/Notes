@@ -62,10 +62,14 @@
             android:id="@+id/current_date_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/textInputLayoutRoot"
             android:textStyle="bold"
             tools:text = "Дата заметки: 04.07.2022г. 10:00"/>
 
+
+
     </RelativeLayout>
+
+
 </ScrollView>
